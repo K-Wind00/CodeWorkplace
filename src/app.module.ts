@@ -4,6 +4,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UserModule } from './User/user.module';
 import { AuthModule } from './Auth/auth.module';
+import { OfferModule } from './Offer/offer.module';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { AuthModule } from './Auth/auth.module';
     }),
     forwardRef(() => UserModule),
     forwardRef(() => AuthModule),
+    OfferModule,
   ],
   controllers: [AppController],
   providers: [AppService],
